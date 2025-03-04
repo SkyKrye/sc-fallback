@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Matisse Pro EB';
+    src: local('FOT-Matisse Pro EB'),
+        url('FOT-Matisse Pro EB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TeXGyreHerosCondensed';
+    src: local('TeXGyreHerosCondensed-Bold'),
+        url('TeXGyreHerosCondensed-Bold.woff2') format('woff2'),
+        url('TeXGyreHerosCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matisse Pro L';
+    src: local('FOT-Matisse Pro L'),
+        url('FOT-Matisse Pro L.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro 45 Light';
+    src: local('Helvetica Neue LT Pro 45 Light'),
+        url('Helvetica Neue LT Pro 45 Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matisse Pro B';
+    src: local('FOT-Matisse Pro B'),
+        url('FOT-Matisse Pro B.woff').format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Corbert';
+    src: local('Corbert'),
+        url('Corbert-Regular.woff').format('woff');
+    font-style: normal;
+    font-display: swap;
+}
