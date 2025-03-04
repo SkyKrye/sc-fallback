@@ -1,0 +1,116 @@
+<html id="html">
+<head>
+	<title>Solarsicom...</title>
+	<link rel="stylesheet" href="resources/style.css">
+	<link rel="stylesheet" href="resources/fonts.css">
+    <link rel="icon" href="solarsicom-7.webp" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		* {
+			transition: 500ms;
+		}
+		html {
+			background-color: #121212;
+			background: linear-gradient(0deg, #121212, black), #121212;
+			background-attachment: fixed;
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    background-position: top;
+		}
+		body {
+			margin: 10px;
+			padding: 10vw 20vw 10vw 20vw;
+		}
+		body.alternative {
+		    display: flex;
+    		height: -webkit-fill-available;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    align-items: center;
+		    justify-content: center;
+		}
+		div.innerContent {
+			margin: 0;
+			background: transparent;
+			filter: drop-shadow(0px 0px 20px #ffdead9f);
+		}
+        .animated {
+            animation: filters 2s linear 0s infinite;
+        }
+        .animated2 {
+        	animation: frames 12s ease-in 0s infinite alternate-reverse;
+        	animation-timing-function: cubic-bezier(0.51, 0.56, 0.04, 1.24);
+        }
+		@keyframes filters {
+	  		0% {
+	  			filter: brightness(2)
+	  		}
+	  		100% {
+	  			filter: brightness(1)
+	  		}
+		}
+		@keyframes frames {
+			0% {
+				text-shadow: 0;
+			}
+			90% {
+				text-shadow: 70px 0px red, -70px 0px red;
+			}
+			100% {
+				text-shadow: 0;
+			}
+		}
+
+		/* Add media query for screens smaller than 600px */
+		@media screen and (max-width: 1200px) {
+			body.alternative {
+				display: block;
+				padding: 5vw 10vw 5vw 10vw;
+			}
+		}
+
+		@media screen and (max-width: 400px) {
+			body {
+				padding: 0;
+			}
+		}
+	</style>
+</head>
+
+<body class="alternative">
+	<div class="innerContent eva-heading" id="frame">
+		<h2 class="solarsicom">THE END OF</h2>
+		<h2 class="solarsicom">SOLARSICOM</h2>
+		<h3 class="solarsicom-subtitle">ONE MORE FINAL:</h3>
+		<p class="solarsicom-subtext">I need you.</p>
+	</div>
+	<div class="innerContent" id="frame2">
+		<p>Solarsicom, or Solars-Icom, is the website of SkyKrye.</p>
+		<p>The reason you're seeing this is because it's currently down. The website is built on Flask, and needs an actively running server/machine to operate.</p>
+		<p>What you're seeing at the moment is just a fallback, that's why you've been redirected to the URL "fallback.solarsicom.net.pk" (unless you got here on your own).</p>
+		<p onclick="toggle('html', 'frame', 'frame2')">-<a href="https://solarsicom.net.pk/">solarsicom.net.pk</a>-</p>
+
+	</div>
+</body>
+
+<script>
+
+function hide(element) {
+  var toggle = document.getElementById(element);
+  if (toggle.style.display === "none") {
+    toggle.style.display = "block";
+  } else {
+    toggle.style.display = "none";
+  }
+}
+
+function toggle(element1, element2, element3) {
+  document.getElementById(element1).classList.toggle("animated");
+
+  document.getElementById(element2).classList.toggle("animated2");
+  document.getElementById(element3).classList.toggle("animated2");
+}
+
+</script>
+
+</html>
