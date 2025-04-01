@@ -63,7 +63,7 @@ button.player {
 div.eva-heading {
     padding-right: 2vw;
     padding-left: 0vw;
-    padding-top: 1vw;
+    padding-top: 2vw;
 }
 
 h2.solarsicom {
@@ -74,9 +74,10 @@ h2.solarsicom {
     transform: scaleY(1.43);
     text-align: left;
     font-weight: normal;
-    margin-bottom: -30px;
-    margin-top: 6px;
     font-weight: bolder;
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
 }
 
 h2.sc-small {
@@ -91,6 +92,9 @@ h3.solarsicom-subtitle {
     letter-spacing: 0;
     font-size: 23.7px;
     line-height: 23.7px;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
 }
 
 p.solarsicom-subtext {
@@ -101,10 +105,12 @@ p.solarsicom-subtext {
     font-size: 23.37px;
     font-weight: bolder;
     display: flex;
-    line-height: 20px;
     justify-content: flex-end;
     border-bottom: 1px solid #353535;
     box-shadow: 0px 7px 3px #35353566;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
 }
 
 ul {
