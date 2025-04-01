@@ -64,6 +64,7 @@ div.eva-heading {
     padding-right: 2vw;
     padding-left: 0vw;
     padding-top: 2vw;
+    min-width: fit-content;
 }
 
 h2.solarsicom {
