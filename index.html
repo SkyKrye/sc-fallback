@@ -22,17 +22,22 @@
 			padding: 10vw 20vw 10vw 20vw;
 		}
 		body.alternative {
-		    display: flex;
-    		height: -webkit-fill-available;
-		    flex-direction: row;
-		    flex-wrap: nowrap;
-		    align-items: center;
-		    justify-content: center;
+	    display: flex;
+  		height: -webkit-fill-available;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    align-items: center;
+	    justify-content: center;
 		}
 		div.innerContent {
 			margin: 0;
 			background: transparent;
 			filter: drop-shadow(0px 0px 20px #ffdead9f);
+		}
+    #refreshLink {
+	    display: none; /* Initially hidden */
+	    cursor: pointer;
+	    user-select: none;
 		}
         .animated {
             animation: filters 2s linear 0s infinite;
@@ -89,6 +94,7 @@
 		<p>The reason you're seeing this is because it's currently down. The website is built on Flask, and needs an actively running server/machine to operate.</p>
 		<p>What you're seeing at the moment is just a fallback, that's why you've been redirected here (unless you typed the url manually).</p>
 		<p onclick="toggle('html', 'frame', 'frame2')">-<a href="https://solarsicom.net.pk/">solarsicom.net.pk</a>-</p>
+    <p class="solarsicom-subtext" id="refreshLink" style="width: -webkit-fill-available;">NEXT UP</p>
 
 	</div>
 </body>
@@ -110,6 +116,82 @@ function toggle(element1, element2, element3) {
   document.getElementById(element2).classList.toggle("animated2");
   document.getElementById(element3).classList.toggle("animated2");
 }
+
+        // Define pairs of subtitle and subtext
+        const contentPairs = [
+            { subtitle: "EPISODE:1", subtext: "ANGEL ATTACK" },
+            { subtitle: "EPISODE:2", subtext: "THE BEAST" },
+            { subtitle: "EPISODE:3", subtext: "A transfer" },
+            { subtitle: "EPISODE:4", subtext: "Hedgehog's Dilemma" },
+            { subtitle: "EPISODE:5", subtext: "Rei I" },
+            { subtitle: "EPISODE:6", subtext: "Rei II" },
+            { subtitle: "EPISODE:7", subtext: "A HUMAN WORK" },
+            { subtitle: "EPISODE:8", subtext: "ASUKA STRIKES!" },
+            { subtitle: "EPISODE:9", subtext: "Both of You,<br>Dance Like You Want to Win!" },
+            { subtitle: "EPISODE:10", subtext: "MAGMADIVER" },
+            { subtitle: "EPISODE:11", subtext: "The Day Tokyo-3 Stood Still" },
+            { subtitle: "EPISODE:12", subtext: `She said, "Don't make others suffer<br>for your personal hatred."` },
+            { subtitle: "EPISODE:13", subtext: "LILLIPUTIAN HITCHER" },
+            { subtitle: "EPISODE:14", subtext: "WEAVING A STORY" },
+            { subtitle: "EPISODE:15", subtext: "Those women longed for the touch of<br>others' lips, and thus invited their kisses." },
+            { subtitle: "EPISODE:16", subtext: "Splitting of the Breast" },
+            { subtitle: "EPISODE:17", subtext: "FOURTH CHILDREN" },
+            { subtitle: "EPISODE:18", subtext: "AMBIVALENCE" },
+            { subtitle: "EPISODE:19", subtext: "INTROJECTION" },
+            { subtitle: "EPISODE:20", subtext: "WEAVING A STORY 2 : oral stage" },
+            { subtitle: "EPISODE:21", subtext: "He was aware that he was still a child." },
+            { subtitle: "EPISODE:22", subtext: "Don't be." },
+            { subtitle: "EPISODE:23", subtext: "Rei III" },
+            { subtitle: "EPISODE:24", subtext: `The Beginning and the End,<br>or "Knockin' on Heaven's Door".` },
+            { subtitle: "EPISODE:25", subtext: "Do you love me?" },
+            { subtitle: "FINALE:", subtext: "Take care of yourself." },
+            { subtitle: "ONE MORE FINAL:", subtext: "I need you." },
+        ];
+
+        // Initialize the index for cycling through the series
+        let currentIndex = Math.floor(Math.random() * contentPairs.length);
+
+        // Function to refresh content (randomly on page load and cyclically on click)
+        function refreshContent(randomize = false) {
+            // Select the eva-heading div
+            const evaHeadingDiv = document.querySelector('.eva-heading');
+
+            // Check if subtitle and subtext exist inside eva-heading div
+            const subtitleElement = evaHeadingDiv.querySelector('.solarsicom-subtitle');
+            const subtextElement = evaHeadingDiv.querySelector('.solarsicom-subtext');
+
+            if (subtitleElement && subtextElement) {
+                // Randomize the pair if requested, otherwise cycle to the next
+                if (randomize) {
+                    currentIndex = Math.floor(Math.random() * contentPairs.length);
+                } else {
+                    currentIndex = (currentIndex + 1) % contentPairs.length;
+                }
+
+                const randomPair = contentPairs[currentIndex];
+
+                // Update the content dynamically
+                subtitleElement.textContent = randomPair.subtitle; // Keep subtitle plain
+                subtextElement.innerHTML = randomPair.subtext;     // Render subtext with line breaks
+            } else {
+                console.error("Subtitle or subtext elements are missing inside the eva-heading div.");
+            }
+        }
+
+        // Attach refresh function to the <a> tag
+        const refreshLink = document.getElementById('refreshLink');
+        refreshLink.addEventListener('click', () => refreshContent(false));
+
+        // Add double-click listener to eva-heading
+        const evaHeadingDiv = document.querySelector('.eva-heading');
+        evaHeadingDiv.addEventListener('dblclick', () => {
+            // Show the <a> tag
+            refreshLink.style.display = 'inline-flex';
+        });
+
+        // Call the function once on page load with randomness
+        refreshContent(true);
+
 
 </script>
 
