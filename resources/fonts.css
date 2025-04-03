@@ -5,6 +5,7 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+    unicode-range: U+0020-007F; /* Basic Latin */
 }
 
 @font-face {
@@ -15,6 +16,7 @@
     font-weight: bold;
     font-style: normal;
     font-display: swap;
+    unicode-range: U+0020-007F; /* Basic Latin */
 }
 
 @font-face {
@@ -40,6 +42,7 @@
         url('FOT-Matisse Pro B.woff').format('woff');
     font-style: normal;
     font-display: swap;
+    unicode-range: U+0020-007F; /* Basic Latin */
 }
 
 @font-face {
