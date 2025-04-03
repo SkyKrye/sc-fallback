@@ -1,0 +1,198 @@
+<html id="html">
+<head>
+	<title>Solarsicom...</title>
+	<link rel="stylesheet" href="resources/style.css">
+	<link rel="stylesheet" href="resources/fonts.css">
+    <link rel="icon" href="solarsicom-7.webp" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		* {
+			transition: 500ms;
+		}
+		html {
+			background-color: #121212;
+			background: linear-gradient(0deg, #121212, black), #121212;
+			background-attachment: fixed;
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    background-position: top;
+		}
+		body {
+			margin: 10px;
+			padding: 10vw 20vw 10vw 20vw;
+		}
+		body.alternative {
+	    display: flex;
+  		height: -webkit-fill-available;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    align-items: center;
+	    justify-content: center;
+		}
+		div.innerContent {
+			margin: 0;
+			background: transparent;
+			filter: drop-shadow(0px 0px 20px #ffdead9f);
+		}
+    #refreshLink {
+	    display: none; /* Initially hidden */
+	    cursor: pointer;
+	    user-select: none;
+		}
+        .animated {
+            animation: filters 2s linear 0s infinite;
+        }
+        .animated2 {
+        	animation: frames 12s ease-in 0s infinite alternate-reverse;
+        	animation-timing-function: cubic-bezier(0.51, 0.56, 0.04, 1.24);
+        }
+		@keyframes filters {
+	  		0% {
+	  			filter: brightness(2)
+	  		}
+	  		100% {
+	  			filter: brightness(1)
+	  		}
+		}
+		@keyframes frames {
+			0% {
+				text-shadow: 0;
+			}
+			90% {
+				text-shadow: 70px 0px red, -70px 0px red;
+			}
+			100% {
+				text-shadow: 0;
+			}
+		}
+
+		/* Add media query for screens smaller than 600px */
+		@media screen and (max-width: 1200px) {
+			body.alternative {
+				display: block;
+				padding: 5vw 10vw 5vw 10vw;
+			}
+		}
+
+		@media screen and (max-width: 400px) {
+			body {
+				padding: 0;
+			}
+		}
+	</style>
+</head>
+
+<body class="alternative">
+	<div class="innerContent eva-heading" id="frame">
+		<h2 class="solarsicom">THE END OF</h2>
+		<h2 class="solarsicom">SOLARSICOM</h2>
+		<h3 class="solarsicom-subtitle">ONE MORE FINAL:</h3>
+		<p class="solarsicom-subtext">I need you.</p>
+	</div>
+	<div class="innerContent" id="frame2">
+    	<p class="solarsicom-subtext" id="refreshLink" style="width: -webkit-fill-available;">NEXT UP</p>
+		<p>Solarsicom, or Solars-Icom, is the website of SkyKrye.</p>
+		<p>The reason you're seeing this is because it's currently down. The website is built on Flask, and needs an actively running server/machine to operate.</p>
+		<p>What you're seeing at the moment is just a fallback, that's why you've been redirected here (unless you typed the url manually).</p>
+		<p onclick="toggle('html', 'frame', 'frame2')">-<a href="https://solarsicom.net.pk/">solarsicom.net.pk</a>-</p>
+
+	</div>
+</body>
+
+<script>
+
+function hide(element) {
+  var toggle = document.getElementById(element);
+  if (toggle.style.display === "none") {
+    toggle.style.display = "block";
+  } else {
+    toggle.style.display = "none";
+  }
+}
+
+function toggle(element1, element2, element3) {
+  document.getElementById(element1).classList.toggle("animated");
+
+  document.getElementById(element2).classList.toggle("animated2");
+  document.getElementById(element3).classList.toggle("animated2");
+}
+
+        // Define pairs of subtitle and subtext
+        const contentPairs = [
+            { subtitle: "EPISODE:1", subtext: "ANGEL ATTACK" },
+            { subtitle: "EPISODE:2", subtext: "THE BEAST" },
+            { subtitle: "EPISODE:3", subtext: "A transfer" },
+            { subtitle: "EPISODE:4", subtext: "Hedgehog's Dilemma" },
+            { subtitle: "EPISODE:5", subtext: "Rei I" },
+            { subtitle: "EPISODE:6", subtext: "Rei II" },
+            { subtitle: "EPISODE:7", subtext: "A HUMAN WORK" },
+            { subtitle: "EPISODE:8", subtext: "ASUKA STRIKES!" },
+            { subtitle: "EPISODE:9", subtext: "Both of You,<br>Dance Like You Want to Win!" },
+            { subtitle: "EPISODE:10", subtext: "MAGMADIVER" },
+            { subtitle: "EPISODE:11", subtext: "The Day Tokyo-3 Stood Still" },
+            { subtitle: "EPISODE:12", subtext: `She said, "Don't make others suffer<br>for your personal hatred."` },
+            { subtitle: "EPISODE:13", subtext: "LILLIPUTIAN HITCHER" },
+            { subtitle: "EPISODE:14", subtext: "WEAVING A STORY" },
+            { subtitle: "EPISODE:15", subtext: "Those women longed for the touch of<br>others' lips, and thus invited their kisses." },
+            { subtitle: "EPISODE:16", subtext: "Splitting of the Breast" },
+            { subtitle: "EPISODE:17", subtext: "FOURTH CHILDREN" },
+            { subtitle: "EPISODE:18", subtext: "AMBIVALENCE" },
+            { subtitle: "EPISODE:19", subtext: "INTROJECTION" },
+            { subtitle: "EPISODE:20", subtext: "WEAVING A STORY 2 : oral stage" },
+            { subtitle: "EPISODE:21", subtext: "He was aware that he was still a child." },
+            { subtitle: "EPISODE:22", subtext: "Don't be." },
+            { subtitle: "EPISODE:23", subtext: "Rei III" },
+            { subtitle: "EPISODE:24", subtext: `The Beginning and the End,<br>or "Knockin' on Heaven's Door".` },
+            { subtitle: "EPISODE:25", subtext: "Do you love me?" },
+            { subtitle: "FINALE:", subtext: "Take care of yourself." },
+            { subtitle: "ONE MORE FINAL:", subtext: "I need you." },
+        ];
+
+        // Initialize the index for cycling through the series
+        let currentIndex = Math.floor(Math.random() * contentPairs.length);
+
+        // Function to refresh content (randomly on page load and cyclically on click)
+        function refreshContent(randomize = false) {
+            // Select the eva-heading div
+            const evaHeadingDiv = document.querySelector('.eva-heading');
+
+            // Check if subtitle and subtext exist inside eva-heading div
+            const subtitleElement = evaHeadingDiv.querySelector('.solarsicom-subtitle');
+            const subtextElement = evaHeadingDiv.querySelector('.solarsicom-subtext');
+
+            if (subtitleElement && subtextElement) {
+                // Randomize the pair if requested, otherwise cycle to the next
+                if (randomize) {
+                    currentIndex = Math.floor(Math.random() * contentPairs.length);
+                } else {
+                    currentIndex = (currentIndex + 1) % contentPairs.length;
+                }
+
+                const randomPair = contentPairs[currentIndex];
+
+                // Update the content dynamically
+                subtitleElement.textContent = randomPair.subtitle; // Keep subtitle plain
+                subtextElement.innerHTML = randomPair.subtext;     // Render subtext with line breaks
+            } else {
+                console.error("Subtitle or subtext elements are missing inside the eva-heading div.");
+            }
+        }
+
+        // Attach refresh function to the <a> tag
+        const refreshLink = document.getElementById('refreshLink');
+        refreshLink.addEventListener('click', () => refreshContent(false));
+
+        // Add double-click listener to eva-heading
+        const evaHeadingDiv = document.querySelector('.eva-heading');
+        evaHeadingDiv.addEventListener('dblclick', () => {
+            // Show the <a> tag
+            refreshLink.style.display = 'inline-flex';
+        });
+
+        // Call the function once on page load with randomness
+        refreshContent(true);
+
+
+</script>
+
+</html>
