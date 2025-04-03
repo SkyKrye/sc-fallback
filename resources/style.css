@@ -64,7 +64,6 @@ div.eva-heading {
     padding-right: 2vw;
     padding-left: 0vw;
     padding-top: 2vw;
-    min-width: fit-content;
 }
 
 h2.solarsicom {
@@ -83,6 +82,7 @@ h2.solarsicom {
 
 h2.sc-small {
     font-size: 24px;
+    line-height: 30px;
 }
 
 h3.solarsicom-subtitle {
@@ -108,7 +108,7 @@ p.solarsicom-subtext {
     justify-content: flex-end;
     border-bottom: 1px solid #353535;
     box-shadow: 0px 7px 3px #35353566;
-    margin: 0;
+    margin-top: 5px;
     padding: 0;
     line-height: 20px;
 }
@@ -220,13 +220,13 @@ li a img.navigation {
 .sc-chan {
     position: fixed;
     z-index: 999999;
-    display: flex;
     bottom: 1;
     right: 1;
     background: none;
     outline: none;
     max-height: 500px;
-    opacity: 0;
+    opacity: 0 !important;
+    visibility: hidden;
 
     transition: 1000ms;
 }
@@ -643,6 +643,7 @@ div.content-container {
 
     border-radius: 2px;
     outline: 1px solid #333;
+    padding: 0; /* experimental btw remove this if the design looks weird  */
 
 }
 
@@ -665,13 +666,13 @@ div.content-container {
 }
 
 h3#toggle {
-	text-decoration: none;
-   	background: #000;
-    	border: 2px solid #000;
-   	padding: 6px;
-  	border-radius: 2px;
-  	outline: 1px solid #333;
-  	user-select: none;
+    text-decoration: none;
+    background: #000;
+        border: 2px solid #000;
+    padding: 6px;
+    border-radius: 2px;
+    outline: 1px solid #333;
+    user-select: none;
 }
 
 .editable {
@@ -865,6 +866,40 @@ video:hover {
 .file-type-error:hover {
     box-shadow: 0 0 2.5px 0px white;
     transition: 10ms;
+}
+
+/* Start with the image hidden */
+img.lazyload {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Once the image is loaded, apply full opacity */
+img.lazyloaded {
+  opacity: 1;
+}
+
+.iframe-placeholder {
+  position: relative;
+  width: 450px;
+  height: 225px; /* Set the aspect ratio of the iframe */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-content {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #555;
+}
+
+iframe {
+  width: 450px;
+  height: 225px; /* Set the aspect ratio of the iframe */
+  border-radius: 2%;
+  border: 1px solid #111;
 }
 
 @media screen and (max-width: 1400px) {
