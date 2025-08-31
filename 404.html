@@ -5,10 +5,21 @@
 	<link rel="stylesheet" href="resources/fonts.css">
     <link rel="icon" href="solarsicom-7.webp" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preload" href="resources/helvetica_neue_lt_pro_45_light-webfont.woff" as="font" type="font/woff" crossorigin="anonymous" />
+<link rel="preload" href="resources/helvetica_neue_lt_pro_45_light-webfont.woff2" as="font" type="font/woff" crossorigin="anonymous" />
+<link rel="preload" href="resources/FOT-Matisse Pro EB.woff" as="font" type="font/woff" crossorigin="anonymous" />
+<link rel="preload" href="resources/TeXGyreHerosCondensed-Bold.woff2" as="font" type="font/woff" crossorigin="anonymous" />
+
 	<style>
 		* {
 			transition: 500ms;
 		}
+
+		*:hover {
+			transition: 500ms;
+		}
+
 		html {
 			background-color: #121212;
 			background: linear-gradient(0deg, #121212, black), #121212;
@@ -17,35 +28,70 @@
 		    background-repeat: no-repeat;
 		    background-position: top;
 		}
+
 		body {
-			margin: 10px;
-			padding: 10vw 20vw 10vw 20vw;
 		}
+
 		body.alternative {
-	    display: flex;
-  		height: -webkit-fill-available;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    align-items: center;
-	    justify-content: center;
+		    display: flex;
+	  		height: -webkit-fill-available;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    align-items: center;
+		    justify-content: center;
+		    gap: 2vw;
 		}
+
 		div.innerContent {
 			margin: 0;
 			background: transparent;
 			filter: drop-shadow(0px 0px 20px #ffdead9f);
+
+		    max-width: 35%;
+		    padding: 0;
+		    margin: 0px 0px 0px 0px;
+		    text-shadow: 0px 0px 10px #ffdead;
 		}
-    #refreshLink {
-	    display: none; /* Initially hidden */
-	    cursor: pointer;
-	    user-select: none;
+
+		div.eva-heading {
+		    box-shadow: 7px 0px 3px -1px #35353566;
+		    border-right: 1px solid #353535;
+		    /* padding: 0px 2vw; */
+		    padding: 0px 3.7vw;
 		}
+
+		p.solarsicom-subtext {
+			border-bottom-color: transparent;
+			box-shadow: none;
+			font-size: clamp(16.37px, 5vw, 23.37px);
+		}
+
+		p.solarsicom-subtext:not(.eva-heading p.solarsicom-subtext) {
+			background: none;
+		    border-bottom: 1px solid #353535;
+		    box-shadow: 0px 7px 3px #35353566;
+		}
+
+		a {
+		    padding: 5px 10px;
+		    margin: -5px 0px;
+		}
+
+    	#refreshLink {
+		    display: none; /* Initially hidden */
+		    cursor: pointer;
+		    user-select: none;
+		}
+
         .animated {
             animation: filters 2s linear 0s infinite;
         }
+
         .animated2 {
-        	animation: frames 12s ease-in 0s infinite alternate-reverse;
+        	animation: frames 12s ease-in-out 0s infinite alternate-reverse;
         	animation-timing-function: cubic-bezier(0.51, 0.56, 0.04, 1.24);
         }
+
 		@keyframes filters {
 	  		0% {
 	  			filter: brightness(2)
@@ -54,6 +100,7 @@
 	  			filter: brightness(1)
 	  		}
 		}
+
 		@keyframes frames {
 			0% {
 				text-shadow: 0;
@@ -67,10 +114,37 @@
 		}
 
 		/* Add media query for screens smaller than 600px */
-		@media screen and (max-width: 1200px) {
+		@media screen and (max-width: 800px) {
 			body.alternative {
-				display: block;
-				padding: 5vw 10vw 5vw 10vw;
+		        display: flex;
+		        flex-direction: column;
+		        min-height: fit-content;
+		        justify-content: flex-start;
+		        padding: 4vh 0px;
+			}
+
+			div.eva-heading {
+			    box-shadow: none;
+			    border-right-color: transparent;
+			    padding: 0px 2vw;
+			}
+
+			div.eva-heading p.solarsicom-subtext {
+			    border-bottom: 1px solid #353535;
+			    box-shadow: 0px 7px 3px #35353566;
+			}
+
+			div.innerContent {
+			    max-width: 76%;
+			}
+
+			div.innerContent:not(.eva-heading) {
+			    margin-top: 20px;
+				max-width: 300px;
+			}
+
+			p {
+				font-size: 16px;
 			}
 		}
 
@@ -84,7 +158,7 @@
 
 <body class="alternative">
 	<div class="innerContent eva-heading" id="frame">
-		<h2 class="solarsicom">THE END OF</h2>
+		<h2 class="solarsicom sc-small">THE END OF</h2>
 		<h2 class="solarsicom">SOLARSICOM</h2>
 		<h3 class="solarsicom-subtitle">ONE MORE FINAL:</h3>
 		<p class="solarsicom-subtext">I need you.</p>
@@ -92,9 +166,9 @@
 	<div class="innerContent" id="frame2">
     	<p class="solarsicom-subtext" id="refreshLink" style="width: -webkit-fill-available;">NEXT UP</p>
 		<p>Solarsicom, or Solars-Icom, is the website of SkyKrye.</p>
-		<p>The reason you're seeing this is because it's currently down. The website is built on Flask, and needs an actively running server/machine to operate.</p>
+		<p>The reason you're seeing this is because it's currently down. The website is built in Flask, and needs an actively running server/machine to operate.</p>
 		<p>What you're seeing at the moment is just a fallback, that's why you've been redirected here (unless you typed the url manually).</p>
-		<p onclick="toggle('html', 'frame', 'frame2')">-<a href="https://solarsicom.net.pk/">solarsicom.net.pk</a>-</p>
+		<p onclick="toggle('html', 'frame', 'frame2')" style="cursor: pointer;"><i style="color: #999;">Return:</i> <a href="https://solarsicom.net.pk/">solarsicom.net.pk</a></p>
 
 	</div>
 </body>
@@ -113,8 +187,8 @@ function hide(element) {
 function toggle(element1, element2, element3) {
   document.getElementById(element1).classList.toggle("animated");
 
-  document.getElementById(element2).classList.toggle("animated2");
-  document.getElementById(element3).classList.toggle("animated2");
+  document.getElementById(element2).classList.toggle("animated");
+  document.getElementById(element3).classList.toggle("animated");
 }
 
         // Define pairs of subtitle and subtext
