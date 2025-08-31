@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Matisse Pro EB';
     src: local('FOT-Matisse Pro EB'),
-        url('FOT-Matisse Pro EB.woff') format('woff');
+        url('/resources/MatissePro-EB-AlphaNum.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
