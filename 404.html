@@ -168,10 +168,22 @@
 		<p>Solarsicom, or Solars-Icom, is the website of SkyKrye.</p>
 		<p>The reason you're seeing this is because it's currently down. The website is built in Flask, and needs an actively running server/machine to operate.</p>
 		<p>What you're seeing at the moment is just a fallback, that's why you've been redirected here (unless you typed the url manually).</p>
-		<p onclick="toggle('html', 'frame', 'frame2')" style="cursor: pointer;"><i style="color: #999;">Return:</i> <a href="https://solarsicom.net.pk/">solarsicom.net.pk</a></p>
+		<p onclick="toggle('html', 'frame', 'frame2')" style="cursor: pointer;"><i style="color: #999;">Return:</i> <a id="return" href="#">solarsicom.net.pk</a></p>
 
 	</div>
 </body>
+	
+<script>
+  const mainDomain = 'https://solarsicom.net.pk';
+  const currentPath = window.location.pathname + window.location.search;
+  const fullURL = mainDomain + currentPath;
+
+  // Update the link dynamically
+  const link = document.getElementById('return');
+  if (link) {
+    link.href = fullURL;
+  }
+</script>
 
 <script>
 
@@ -270,5 +282,6 @@ function toggle(element1, element2, element3) {
 </script>
 
 </html>
+
 
 
