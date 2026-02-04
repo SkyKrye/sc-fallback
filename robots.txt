@@ -1,0 +1,280 @@
+<!--
+Source - https://stackoverflow.com/a/4055328
+Posted by Donut, modified by community. See post 'Timeline' for change history
+Retrieved 2026-02-04, License - CC BY-SA 2.5
+
+Disallow: /imprint-page.htm
+
+New source: https://crawlercheck.com/directory/search-engines#robots-generator
+-->
+
+<!-- SEARCH ENGINES -->
+
+User-agent: applebot
+Allow: /
+User-agent: aspiegelbot
+Allow: /
+User-agent: baiduspider
+Allow: /
+User-agent: bingbot
+Allow: /
+User-agent: duckduckbot
+Allow: /
+User-agent: googlebot
+Allow: /
+User-agent: mojeek
+Allow: /
+User-agent: mojeekbot
+Allow: /
+User-agent: petalbot
+Allow: /
+User-agent: seznamhomepagecrawler
+Allow: /
+User-agent: slurp
+Allow: /
+User-agent: teoma
+Allow: /
+User-agent: yahoo-blogs
+Allow: /
+User-agent: yahoo-feedseeker
+Allow: /
+User-agent: yahoo-mmcrawler
+Allow: /
+User-agent: yahooseeker
+Allow: /
+User-agent: yandex
+Allow: /
+User-agent: yandexadditional
+Allow: /
+User-agent: yandexadditionalbot
+Allow: /
+User-agent: yandexbot
+Allow: /
+User-agent: baidu
+Allow: /
+
+<!-- CLANKERS -->
+
+User-agent: ai2bot
+Disallow: /
+User-agent: ai2bot-dolma
+Disallow: /
+User-agent: big-sur-ai
+Disallow: /
+User-agent: Big Sur AI
+Disallow: /
+User-agent: chatgpt-operator
+Disallow: /
+User-agent: ChatGPT Operator
+Disallow: /
+User-agent: chatgpt-user
+Disallow: /
+User-agent: chatgpt-user-2-0
+Disallow: /
+User-agent: claude-searchbot
+Disallow: /
+User-agent: claude-user
+Disallow: /
+User-agent: claude-web
+Disallow: /
+User-agent: claudebot
+Disallow: /
+User-agent: digitaloceangenai-crawler
+Disallow: /
+User-agent: DigitalOceanGenAICrawler
+Disallow: /
+User-agent: duckassistbot
+Disallow: /
+User-agent: gptbot
+Disallow: /
+User-agent: google-extended
+Disallow: /
+User-agent: grok
+Disallow: /
+User-agent: liner-bot
+Disallow: /
+User-agent: LINER Bot
+Disallow: /
+User-agent: mistralai-user
+Disallow: /
+User-agent: mistralai-user-1-0
+Disallow: /
+User-agent: mycentralaiscraperbot
+Disallow: /
+User-agent: oai-searchbot
+Disallow: /
+User-agent: perplexity-user
+Disallow: /
+User-agent: perplexity-user-1-0
+Disallow: /
+User-agent: perplexitybot
+Disallow: /
+User-agent: sbintuitionsbot
+Disallow: /
+User-agent: youbot
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: cohere-ai
+Disallow: /
+User-agent: cohere-training-data-crawler
+Disallow: /
+User-agent: img2dataset
+Disallow: /
+User-agent: quillbot-com
+Disallow: /
+User-agent: quillbot.com
+Disallow: /
+
+<!-- SCRAPERS -->
+
+User-agent: amazon-kendra
+Disallow: /
+User-agent: Amazon Kendra
+Disallow: /
+User-agent: arquivo-web-crawler
+Disallow: /
+User-agent: blexbot
+Disallow: /
+User-agent: barkrowler
+Disallow: /
+User-agent: bravest
+Disallow: /
+User-agent: bytespider
+Disallow: /
+User-agent: ccbot
+Disallow: /
+User-agent: cotoyogi
+Disallow: /
+User-agent: crawlspace
+Disallow: /
+User-agent: diffbot
+Disallow: /
+User-agent: echobot-bot
+Disallow: /
+User-agent: Echobot Bot
+Disallow: /
+User-agent: echoboxbot
+Disallow: /
+User-agent: factset-spyderbot
+Disallow: /
+User-agent: Factset_spyderbot
+Disallow: /
+User-agent: friendlycrawler
+Disallow: /
+User-agent: icc-crawler
+Disallow: /
+User-agent: isscyberriskcrawler
+Disallow: /
+User-agent: imagesiftbot
+Disallow: /
+User-agent: jenkersbot
+Disallow: /
+User-agent: kangaroo-bot
+Disallow: /
+User-agent: Kangaroo Bot
+Disallow: /
+User-agent: livelapbot
+Disallow: /
+User-agent: mauibot
+Disallow: /
+User-agent: moodlebot
+Disallow: /
+User-agent: newsnow
+Disallow: /
+User-agent: novaact
+Disallow: /
+User-agent: pangubot
+Disallow: /
+User-agent: poseidon-research-crawler
+Disallow: /
+User-agent: Poseidon Research Crawler
+Disallow: /
+User-agent: qualifiedbot
+Disallow: /
+User-agent: scrapy
+Disallow: /
+User-agent: seekportbot
+Disallow: /
+User-agent: seekr
+Disallow: /
+User-agent: seekrbot
+Disallow: /
+User-agent: taragroup-intelligent-bot
+Disallow: /
+User-agent: TaraGroup Intelligent Bot
+Disallow: /
+User-agent: timpibot
+Disallow: /
+User-agent: turnitin
+Disallow: /
+User-agent: velenpublicwebcrawler
+Disallow: /
+User-agent: webzio-extended
+Disallow: /
+User-agent: coccocbot-web
+Disallow: /
+User-agent: crawler4j
+Disallow: /
+User-agent: hada-news
+Disallow: /
+User-agent: https://hada.news
+Disallow: /
+User-agent: iaskspider
+Disallow: /
+User-agent: iaskspider-2-0
+Disallow: /
+User-agent: imediaethics-org
+Disallow: /
+User-agent: https://www.imediaethics.org
+Disallow: /
+User-agent: imgproxy
+Disallow: /
+User-agent: magpie-crawler
+Disallow: /
+User-agent: netestate-imprint-crawler
+Disallow: /
+User-agent: netEstate Imprint Crawler
+Disallow: /
+User-agent: news-please
+Disallow: /
+User-agent: omgili
+Disallow: /
+User-agent: omgilibot
+Disallow: /
+User-agent: yacy
+Disallow: /
+User-agent: yacybot
+Disallow: /
+
+<!-- CLOUD -->
+
+User-agent: aliyunsecbot
+Disallow: /
+User-agent: amazonbot
+Disallow: /
+User-agent: google-cloudvertexbot
+Disallow: /
+
+<!-- OTHER -->
+
+User-agent: turnitinbot
+Disallow: /
+User-agent: viennatinybot
+Disallow: /
+User-agent: archive-org-bot
+Disallow: /
+User-agent: archive.org_bot
+Disallow: /
+User-agent: ia-archiver
+Disallow: /
+User-agent: ia_archiver
+Disallow: /
+User-agent: ia-archiver-web-archive-org
+Disallow: /
+User-agent: ia_archiver-web.archive.org
+Disallow: /
+User-agent: peer39-crawler-1-0
+Disallow: /
+User-agent: peer39_crawler
+Disallow: /
