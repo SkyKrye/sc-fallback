@@ -189,7 +189,7 @@ a:not(li a):not(td a) {
     background: #00000047;
     /* padding: 0px 3px; */
     border-radius: 2px;
-    outline: 1px solid #33333347;
+    outline: 1px solid #333333bd;
     transition: 1000ms;
 
     height: inherit;
@@ -238,7 +238,7 @@ img:not(ul img):not(span img), img.profile-picture-display {
     background-repeat: repeat;
     backdrop-filter: opacity(0.5);
     border-radius: 2px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     transition: 1000ms;
 }
 
@@ -301,7 +301,7 @@ li.extras {
     justify-content: flex-start;
 
     border-bottom: 2px solid #111111cc;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     background: #111111aa;
 }
 
@@ -379,7 +379,7 @@ ol.socials li a {
     border: 2px solid #000;
     padding: 12px 0px 14px 10px;
     border-radius: 2px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     -webkit-user-select: none;
     user-select: none;
     margin-top: 6px;
@@ -439,7 +439,7 @@ p:not(.messages):not(.solarsicom-subtext):not(.error) {
 .messages {
     transition: 1000ms;
     border-radius: 2px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     margin-bottom: 0;
@@ -497,7 +497,7 @@ p.description, fieldset.profile-element {
     word-break: break-word;
     max-height: 200px;
     border-radius: 2px;
-    border: 1px solid #333;
+    border: 1px solid #333333bd;
     transition: 1000ms;
 }
 
@@ -517,7 +517,7 @@ p.description:hover, fieldset.profile-element:hover {
     overflow-y: auto;
 
     border-radius: 2px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
 
     transition: 1000ms;
 
@@ -814,7 +814,7 @@ div.content-container {
     border-radius: 2px;
     padding: 0; /* experimental btw remove this if the design looks weird  */
     margin-bottom: -10px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     border: 2px solid #111;
 
 }
@@ -852,7 +852,7 @@ div.content-container hr {
     border-radius: 4.7px;
     margin: 10px;
     text-shadow: none;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     /* box-shadow: 0px 0px 2px 0px #ffffff; */
     transition: 1000ms;
 }
@@ -879,7 +879,7 @@ h3#toggle {
         border: 2px solid #000;
     padding: 6px;
     border-radius: 2px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -993,7 +993,7 @@ input#btn:hover, input#btn-2:hover {
     margin-right: 10px;
     border: none;
     border-radius: 2px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     background: rgb(12 12 12);
     transition: 1000ms;
 }
@@ -1007,7 +1007,7 @@ input#btn:hover, input#btn-2:hover {
 b.rating {
 
     /* border: 1px solid #353535; */
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     color: #ffffff8c;
     border-radius: 2px;
     padding: 10px;
@@ -1110,7 +1110,7 @@ i.active:hover {
 
 video {
     border-radius: 2px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     /* aspect-ratio: 4 / 3; */
     height: 15vw;
 }
@@ -1128,7 +1128,7 @@ video:hover {
     letter-spacing: -0.2px;
     display: block;
     border-radius: 2px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     transition: 1000ms;
 }
 
@@ -1273,7 +1273,7 @@ legend {
     display: flex;
     padding: 0px;
     border-radius: 4.7px;
-    outline: 1px solid #333;
+    outline: 1px solid #333333bd;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -1333,7 +1333,7 @@ legend {
 .badge hr {
     padding: 0;
     margin: 0;
-    border: 1px solid #333;
+    border: 1px solid #333333bd;
 }
 
 .badge-element:nth-child(2) {
@@ -2019,7 +2019,7 @@ body {
         height: 30px;
         border: none;
         border-radius: 2px;
-        outline: 1px solid #333;
+        outline: 1px solid #333333bd;
         background: rgb(12 12 12);
         transition: 1000ms;
     }
@@ -2059,4 +2059,5 @@ body {
 
 
 /* ⇲⇱⌂ */
+
 
