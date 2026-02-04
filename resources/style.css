@@ -184,7 +184,7 @@ a:not(li a):not(td a) {
     */
 
     color: red;
-    text-shadow: -5px 0px 4px #ff000094, 5px 0px 4px #ff000091;
+    /* text-shadow: -5px 0px 4px #ff000094, 5px 0px 4px #ff000091; */
     text-decoration: none;
     background: #00000047;
     /* padding: 0px 3px; */
@@ -2059,3 +2059,4 @@ body {
 
 
 /* ⇲⇱⌂ */
+
