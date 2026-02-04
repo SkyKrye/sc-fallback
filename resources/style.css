@@ -69,7 +69,8 @@ div.innerContent {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Helvetica Neue LT Pro 45 Light', sans-serif;
+    /* font-family: 'Helvetica Neue LT Pro 45 Light', sans-serif; */
+    font-family: 'Aileron', sans-serif;
     font-display: swap;
     /* font-family: monospace; */
     letter-spacing: 0.5px;
@@ -967,7 +968,8 @@ p.media-messages video {
 }
 
 input#btn, input#btn-2 {
-    font-family: 'Helvetica Neue LT Pro 45 Light', sans-serif;
+    /* font-family: 'Helvetica Neue LT Pro 45 Light', sans-serif; */
+    font-family: 'Aileron', sans-serif;
     font-display: swap;
     letter-spacing: 0.5px;
     text-align: center;
@@ -1209,7 +1211,8 @@ span.postText {
     white-space: pre-wrap;
     word-break: break-word;
 
-    font-family: 'Helvetica Neue LT Pro 45 Light [full-range]', 'Helvetica Neue LT Pro 45 Light', sans-serif;
+    /* font-family: 'Helvetica Neue LT Pro 45 Light [full-range]', 'Helvetica Neue LT Pro 45 Light', sans-serif; */
+    font-family: 'Aileron', sans-serif;
     font-display: swap;
 
     padding-bottom: 10px;
@@ -2053,5 +2056,6 @@ body {
     }
 
 }
+
 
 /* ⇲⇱⌂ */
