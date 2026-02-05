@@ -73,7 +73,7 @@ div.innerContent {
     font-family: 'Aileron', sans-serif;
     font-display: swap;
     /* font-family: monospace; */
-    letter-spacing: 0.5px;
+    /* letter-spacing: 0.5px; */
     scrollbar-gutter: stable;
 }
 
@@ -2060,6 +2060,7 @@ body {
 
 
 /* ⇲⇱⌂ */
+
 
 
 
