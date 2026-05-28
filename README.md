@@ -1,2 +1,2 @@
 # sc-fallback
-Fallback page in case my website is down
+fallback page in case my website gets a bad gateway error
